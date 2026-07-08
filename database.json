@@ -1,0 +1,10 @@
+{
+  "dossiers": [],
+  "reminders": [],
+  "dossierCounter": {
+    "SAMU": 0,
+    "Police Nationale": 0,
+    "Protection Civile": 0,
+    "Transport": 0
+  }
+}
