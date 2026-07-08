@@ -241,7 +241,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
         if (!interaction.replied && !interaction.deferred) {
             await interaction.reply({
                 content: '❌ Une erreur est survenue. Veuillez réessayer.',
-                ephemeral: true
+                flags: 64 // Éphémère
             });
         }
     }
@@ -254,7 +254,7 @@ async function handleConcour(interaction) {
     if (!hasPermission(interaction, 'ADMIN')) {
         return interaction.reply({
             content: '❌ Vous n\'avez pas la permission d\'utiliser cette commande.',
-            ephemeral: true
+            flags: 64
         });
     }
 
@@ -343,7 +343,7 @@ async function handleConcourSubmit(interaction) {
 
     await interaction.reply({
         content: '✅ Concours créé avec succès !',
-        ephemeral: true
+        flags: 64
     });
 }
 
@@ -449,7 +449,7 @@ async function handleCandidatureSubmit(interaction) {
 
     await interaction.reply({
         content: `✅ Votre dossier a été soumis avec succès !\nNuméro: **${dossierNumber}**\nUn administrateur va traiter votre demande.`,
-        ephemeral: true
+        flags: 64
     });
 }
 
@@ -460,7 +460,7 @@ async function handleChercherDossier(interaction) {
     if (!hasPermission(interaction, 'FACTION_LEADER')) {
         return interaction.reply({
             content: '❌ Vous n\'avez pas la permission d\'utiliser cette commande.',
-            ephemeral: true
+            flags: 64
         });
     }
 
@@ -474,7 +474,7 @@ async function handleChercherDossier(interaction) {
     if (!dossier) {
         return interaction.reply({
             content: `❌ Aucun dossier trouvé avec le numéro **${numero}** pour la faction **${faction}**.`,
-            ephemeral: true
+            flags: 64
         });
     }
 
@@ -500,7 +500,7 @@ async function handleChercherDossier(interaction) {
         .setFooter({ text: `${config.botName} • Dossier` })
         .setTimestamp();
 
-    await interaction.reply({ embeds: [embed], ephemeral: true });
+    await interaction.reply({ embeds: [embed], flags: 64 });
 }
 
 // ============================================
@@ -510,7 +510,7 @@ async function handleStatusDossier(interaction) {
     if (!hasPermission(interaction, 'STAFF')) {
         return interaction.reply({
             content: '❌ Vous n\'avez pas la permission d\'utiliser cette commande.',
-            ephemeral: true
+            flags: 64
         });
     }
 
@@ -522,7 +522,7 @@ async function handleStatusDossier(interaction) {
     if (dossierIndex === -1) {
         return interaction.reply({
             content: `❌ Aucun dossier trouvé avec le numéro **${numero}**.`,
-            ephemeral: true
+            flags: 64
         });
     }
 
@@ -558,7 +558,7 @@ async function handleStatusDossier(interaction) {
 
     await interaction.reply({
         content: `✅ Statut du dossier **${numero}** mis à jour vers **${statusInfo.emoji} ${statusInfo.label}**`,
-        ephemeral: true
+        flags: 64
     });
 }
 
@@ -569,7 +569,7 @@ async function handleRemind(interaction) {
     if (!hasPermission(interaction, 'STAFF')) {
         return interaction.reply({
             content: '❌ Vous n\'avez pas la permission d\'utiliser cette commande.',
-            ephemeral: true
+            flags: 64
         });
     }
 
@@ -643,7 +643,7 @@ async function handleRemindSubmit(interaction) {
 
     await interaction.reply({
         content: '✅ Rappel créé avec succès !',
-        ephemeral: true
+        flags: 64
     });
 }
 
