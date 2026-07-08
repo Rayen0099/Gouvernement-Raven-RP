@@ -1,0 +1,25 @@
+{
+  "name": "gouvernement-raven-rp",
+  "version": "1.0.0",
+  "description": "Discord bot for Tunisian MTA Roleplay server administration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  },
+  "engines": {
+    "node": ">=16.9.0"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "mta",
+    "roleplay",
+    "administration"
+  ],
+  "author": "Gouvernement Raven RP",
+  "license": "MIT"
+}
