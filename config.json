@@ -1,0 +1,21 @@
+{
+  "token": "YOUR_BOT_TOKEN_HERE",
+  "clientId": "YOUR_CLIENT_ID_HERE",
+  "guildId": "YOUR_GUILD_ID_HERE",
+  "channels": {
+    "concours": "CHANNEL_ID_FOR_CONCOURS",
+    "adminNotifications": "CHANNEL_ID_FOR_ADMIN_NOTIFICATIONS",
+    "general": "CHANNEL_ID_FOR_GENERAL"
+  },
+  "roles": {
+    "admin": "ADMIN_ROLE_ID",
+    "factionLeader": "FACTION_LEADER_ROLE_ID",
+    "staff": "STAFF_ROLE_ID"
+  },
+  "factions": [
+    "SAMU",
+    "Police Nationale",
+    "Protection Civile",
+    "Transport"
+  ]
+}
